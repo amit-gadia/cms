@@ -1,0 +1,1 @@
+create table addmission(id int NOT NULL AUTO_INCREMENT,frname varchar(50),lname varchar(50),dob varchar(50),fname varchar(50),focc varchar(50),mname varchar(50),mocc varchar(50),add varchar(50),city varchar(50),state varchar(50),mob_no varchar(50),gender varchar(50),aadhar varchar(50),course varchar(50),branch varchar(50),bg varchar(50),PRIMARY KEY(id));

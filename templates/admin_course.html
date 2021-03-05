@@ -1,0 +1,203 @@
+<html>
+/,.<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+background-color:#000834;
+}
+.abc{
+float:left;
+width:70%;
+margin-top:3%;
+
+background-color:rgba(0,39,48,0.59);
+border-width:5px;
+border-radius:30px;
+margin-left:15%;
+height:35%;
+background-color:rgba(0,39,48,0);
+}
+.lab{
+color:#ffffff;
+font-size:30px;
+}
+.text{
+color:white;
+background-color:rgba(0,0,0,0);
+border-color:white;
+font-size:30px;
+}
+.from{
+margin-left:50%;
+margin-top:10%;
+}
+::-webkit-calendar-picker-indicator{
+filter:invert(1);
+}
+
+.but{
+height:50px;
+width:150px;
+border-radius:15px;
+color:white;
+font-size:18px;
+background:linear-gradient(180deg, #4200FF 0%, #00F0FF 100%);
+}
+</style>
+
+<title>
+COLLEGE MANAGEMENT SYSTEM WEB BASED
+</title>
+</head>
+<body>
+<div class="abc">
+
+<table class="">
+<tr>
+<form action="/addcouuse" method="POST">
+<td width="35%"><label class="lab" for="cname">Course Name</label></td>
+<td width="45%"><input type="text" name="cname" class="text"></input></td>
+<td width="15%"> <input type="submit" name="couname"  class="but" value="ADD COURSE"></input></td>
+</form>
+</tr>
+<tr>
+<form action="/addsubject" method="POST">
+<td width="35%"><label class="lab" for="sname">Subject Name</label></td>
+<td width="45%"><input type="text" name="sname" class="text"></input></td>
+<td width="15%"> <input type="submit" name="couname"  class="but" value="ADD SUBJECT"></input></td>
+</form>
+</tr>
+<tr>
+<form class="from" action="/addbranch" method="POST">
+<td><label class="lab">Branch Name</label></td>
+<td><input type="text" name="bname" class="text"></input></td>
+</tr>
+<tr>
+<td><label class="lab">Branch Fees</label></td>
+<td><input type="text" name="bfees" class="text"></input></td>
+<td><input type="submit" name="butname" class="but" style="background:linear-gradient(180deg, #00F0FF 0%, #4200FF 100%);" value="BRANCH NAME"></input></td>
+</form>
+</tr>
+</table>
+</div>
+<div>
+<table border="1px" style="margin-left:5px;margin-top:50px;" >
+<tr>
+<td style=" color:white;width:4%">
+<td style="width:15%"><label class="lab" style="font-size:40px;" for="cname">Course</label></td>
+<td style="width:7%"></td>
+<td style="width:7%"></td>
+<td style="width:4%"></td>
+<td style="width:15%"><label style="font-size:40px;" class="lab" for="cname">Branch</label></td>
+<td style="width:10%"><label style="font-size:40px;" class="lab" for="cname">Branch_Fees</label></td>
+<td style="width:7%"></td>
+<td style="width:7%"></td>
+<td style="width:4%"></td>
+<td style="width:15%"><label style="font-size:40px;" class="lab" for="cname">Subject</label></td>
+<td style="width:7%"></td>
+</tr>
+{%for i in range(ct)%}
+<tr>
+{%if(i<co and i<br and i<sr)%}
+<td style="color:white;font-size:23px;">{{c[i][0]}}</td>
+<td style="color:white;font-size:23px;">{{c[i][1]}}</td>
+<td style="color:white;font-size:23px;"><a href="/abd/{{c[i][1]}}">Delete</a></td>
+<td ></td>
+<td style="color:white;font-size:23px;">{{b[i][0]}}</td>
+<td style="color:white;font-size:23px;">{{b[i][1]}}</td>
+<td style="color:white;font-size:23px;">{{b[i][2]}}</td>
+<td style="color:white;font-size:23px;"><a href="/abc/{{b[i][1]}}">Delete</td> 
+<td ></td>
+<td style="color:white;font-size:23px;">{{s[i][0]}}</td>
+<td style="color:white;font-size:23px;">{{s[i][1]}}</td>
+<td style="color:white;font-size:23px;"><a href="/sub/{{s[i][1]}}">Delete</td> 
+
+{%elif(i<co and i<sr) %}
+<td style="color:white;font-size:23px;">{{c[i][0]}}</td>
+<td style="color:white;font-size:23px;">{{c[i][1]}}</td>
+<td style="color:white;font-size:23px;"><a href="/abd/{{c[i][1]}}">Delete</td>
+<td ></td>
+<td ></td>
+<td ></td>
+<td ></td>
+<td ></td>
+<td ></td>
+<td style="color:white;font-size:23px;">{{s[i][0]}}</td>
+<td style="color:white;font-size:23px;">{{s[i][1]}}</td>
+<td style="color:white;font-size:23px;"><a href="/sub/{{s[i][1]}}">Delete</td> 
+{%elif(i<br and i<sr)%}
+<td ></td>
+<td ></td>
+<td ></td>
+<td ></td>
+<td style="color:white;font-size:23px;">{{b[i][0]}}</td>
+<td style="color:white;font-size:23px;">{{b[i][1]}}</td>
+<td style="color:white;font-size:23px;">{{b[i][2]}}</td>
+<td style="color:white;font-size:23px;"><a href="/abc/{{b[i][1]}}">Delete</td>
+
+<td ></td>
+<td style="color:white;font-size:23px;">{{s[i][0]}}</td>
+<td style="color:white;font-size:23px;">{{s[i][1]}}</td>
+<td style="color:white;font-size:23px;"><a href="/sub/{{s[i][1]}}">Delete</td> 
+{%elif(i<co and i<br) %}
+<td style="color:white;font-size:23px;">{{c[i][0]}}</td>
+<td style="color:white;font-size:23px;">{{c[i][1]}}</td>
+<td style="color:white;font-size:23px;"><a href="/abd/{{c[i][1]}}">Delete</td>
+<td ></td>
+<td style="color:white;font-size:23px;">{{b[i][0]}}</td>
+<td style="color:white;font-size:23px;">{{b[i][1]}}</td>
+<td style="color:white;font-size:23px;">{{b[i][2]}}</td>
+<td style="color:white;font-size:23px;"><a href="/abc/{{b[i][1]}}">Delete</td> 
+<td ></td>
+<td ></td>
+<td ></td>
+<td ></td>
+{%elif(i<sr) %}
+<td ></td>
+<td ></td>
+<td ></td>
+<td ></td>
+<td ></td>
+<td ></td>
+<td ></td>
+<td ></td>
+<td ></td>
+<td style="color:white;font-size:23px;">{{s[i][0]}}</td>
+<td style="color:white;font-size:23px;">{{s[i][1]}}</td>
+<td style="color:white;font-size:23px;"><a href="/sub/{{s[i][1]}}">Delete</td> 
+{%elif(i<br)%}
+<td ></td>
+<td ></td>
+<td ></td>
+<td ></td>
+<td style="color:white;font-size:23px;">{{b[i][0]}}</td>
+<td style="color:white;font-size:23px;">{{b[i][1]}}</td>
+<td style="color:white;font-size:23px;">{{b[i][2]}}</td>
+<td style="color:white;font-size:23px;"><a href="/abc/{{b[i][1]}}">Delete</td>
+<td ></td>
+<td ></td>
+<td ></td>
+<td ></td>
+{%elif(i<co) %}
+<td style="color:white;font-size:23px;">{{c[i][0]}}</td>
+<td style="color:white;font-size:23px;">{{c[i][1]}}</td>
+<td style="color:white;font-size:23px;"><a href="/abd/{{c[i][1]}}">Delete</td>
+<td ></td>
+<td ></td>
+<td ></td>
+<td ></td>
+<td ></td>
+<td ></td>
+<td ></td>
+<td ></td>
+<td ></td>
+
+
+
+{%endif%}
+</tr>
+{%endfor%}
+</table>
+</form>
+</div>
+</html>

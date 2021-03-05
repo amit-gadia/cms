@@ -1,0 +1,105 @@
+<html>
+/,.<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+background-color:#000834;
+}
+.abc{
+float:left;
+width:70%;
+margin-top:3%;
+border-width:5px;
+border-radius:30px;
+margin-left:15%;
+height:35%;
+background-color:rgba(0,39,48,0);
+}
+.lab{
+color:#ffffff;
+font-size:30px;
+}
+.text{
+color:white;
+background-color:rgba(0,0,0,0);
+border-color:white;
+font-size:30px;
+}
+.from{
+margin-left:50%;
+margin-top:10%;
+}
+::-webkit-calendar-picker-indicator{
+filter:invert(1);
+}
+
+.but{
+height:50px;
+width:150px;
+border-radius:15px;
+color:white;
+font-size:18px;
+background:linear-gradient(180deg, #4200FF 0%, #00F0FF 100%);
+}
+</style>
+
+<title>
+COLLEGE MANAGEMENT SYSTEM WEB BASED
+</title>
+</head>
+<body>
+<div class="abc">
+
+<table class="">
+<tr>
+<form action="/addbusno" method="POST">
+<td width="35%"><label class="lab" for="bno">Bus Number</label></td>
+<td width="45%"><input type="text" name="bno" class="text"></input></td>
+<td width="15%"> <input type="submit" name="couname"  class="but" value="ADD BUS NO."></input></td>
+</form>
+</tr>
+<tr>
+<form class="from" action="/addroute" method="POST">
+<td><label class="lab" for="Bus_No">Bus_No</label></td>
+<td><select name="Bus_No" class="text">
+{%for i in range(br)%}
+<option  class="opt" value={{b[i][0]}}>{{b[i][0]}}</option>
+{%endfor%}
+</select>
+</tr>
+<tr>
+<td><label class="lab">Pick Up Point Name</label></td>
+<td><input type="text" name="point" class="text"></input></td>
+</tr>
+<tr>
+<td><label class="lab">Fees</label></td>
+<td><input type="text" name="busfees" class="text"></input></td>
+<td><input type="submit" name="busfees" class="but" style="background:linear-gradient(180deg, #00F0FF 0%, #4200FF 100%);" value="ADD ROUTE"></input></td>
+</form>
+</tr>
+</table>
+</div>
+<div>
+<table border="1px" style="margin-left:5px;margin-top:50px;" >
+<tr>
+<td style=" color:white;width:4%"></td>
+<td style="width:15%"><label class="lab" style="font-size:40px;" for="cname">BUS NUMBER</label></td>
+<td style="width:15%"><label style="font-size:40px;" class="lab" for="cname">PICKUP</label></td>
+<td style="width:10%"><label style="font-size:40px;" class="lab" for="cname">FEES</label></td>
+<td style="width:7%"></td>
+</tr>
+{%for i in range(co)%}
+<tr>
+<td style="color:white;font-size:23px;">{{c[i][0]}}</td>
+
+<td style="color:white;font-size:23px;">{{c[i][1]}}</td>
+<td style="color:white;font-size:23px;">{{c[i][2]}}</td>
+<td style="color:white;font-size:23px;">{{c[i][3]}}</td>
+<td style="color:white;font-size:23px;"><a href="/ascd/{{c[i][2]}}">Delete</a></td>
+</tr>
+{%endfor%}
+
+</table>
+</form>
+</div>
+</html>

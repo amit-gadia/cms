@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+background-color:#000834;
+}
+.abc{
+float:left;
+width:70%;
+margin-top:3%;
+border-width:5px;
+border-radius:30px;
+margin-left:15%;
+border-color:#55B8A6;
+background-color:rgba(0,39,48,0.59);
+}
+.lab{
+color:#ffffff;
+font-size:30px;
+}
+.text{
+color:white;
+background-color:rgba(0,0,0,0);
+border-color:white;
+font-size:30px;
+}
+.from{
+margin-left:3%;
+margin-top:10%;
+}
+::-webkit-calendar-picker-indicator{
+filter:invert(1);
+}
+
+.but{
+height:50px;
+width:150px;
+border-radius:15px;
+color:white;
+font-size:18px;
+background:linear-gradient(180deg, #4200FF 0%, #00F0FF 100%);
+}
+</style>
+
+<title>
+COLLEGE MANAGEMENT SYSTEM WEB BASED
+</title>
+</head>
+<body>
+<div class="abc">
+<center>
+<table border="1px" style="margin-left:10px;margin-top:35px">
+<tr>
+<td style="width:40%"><label class="lab" style="font-size:35px;" for="cname"></label></td>
+<td style="width:20%"><label class="lab" style="font-size:35px;" for="cname"></label></td>
+
+<td style="width:40%"><label class="lab" style="font-size:35px;" for="cname"></label></td>
+</tr>
+<tr>
+<td colspan='3'><center><label class="lab" style="font-size:35px;" for="cname">PROFILE</label></center></td>
+</tr>
+<tr>
+{%for i in range(1,t)%}
+<tr>
+<td style="color:white;font-size:23px;">{{c[i]}}</td>
+<td style="color:white;font-size:23px;"></td>
+
+<td style="color:white;font-size:23px;">{{d[i]}}</td>
+</tr>
+{%endfor%}
+</table>
+
+</center>
+</form>
+</div>
+</html>

@@ -1,0 +1,220 @@
+ph<html>
+<head>
+<style>
+body{
+background-color:#000834;
+}
+body{
+background-color:#000834;
+}
+.abc{
+float:left;
+width:70%;
+margin-top:3%;
+border-width:5px;
+border-radius:30px;
+margin-left:15%;
+border-color:#55B8A6;
+height:90%;
+background-color:rgba(0,39,48,0.59);
+}
+.lab{
+color:#ffffff;
+font-size:30px;
+margin-left:15%;
+}
+.text{
+color:white;
+background-color:rgba(0,0,0,0);
+border-color:white;
+font-size:30px;
+margin-left:10%;
+}
+.from{
+margin-left:3%;
+margin-top:1%;
+}
+::-webkit-calendar-picker-indicator{
+filter:invert(1);
+}
+
+.but{
+height:50px;
+width:150px;
+border-radius:15px;
+color:white;
+font-size:18px;
+background:linear-gradient(180deg, #4200FF 0%, #00F0FF 100%);
+}
+.form{
+margin-left:30%;
+margin-top:2%;
+border-color:#55B8A6;
+border-style:solid;
+border-width:5px;
+position: absolute;
+background-color:rgba(0,39,48,0.59);
+height:100px;
+width:600px;
+border-radius:60px;
+position: relative;
+}
+
+::placeholder{
+color:#00B2FF;
+}
+.loginbox{
+margin:50px 45px 25px;
+background-color:rgba(0,0,0,0);
+border-radius:50px;
+padding:10px 25px 10px;
+border-color:00B2FF;
+color:#00B2FF;
+border-width:2px;
+font-size:30px; 
+display:block;
+}
+.button{
+height:37px;
+width:152px;
+background-color:#00B2FF;
+margin-top:25px;
+margin-left:165px;
+border-color:#00B2FF;
+border-radius:50px;
+font-size:30px;
+}
+.lb{
+margin-left:145px;
+margin-top:50px;
+margin-bottom:0px;
+color:#FFFFFF;
+font-size:60px; 
+display:block;"
+}
+.lc{
+margin-left:55px;
+margin-top:0px;
+margin-bottom:0px;
+color:#00B2FF;
+font-size:25px; 
+display:block;"
+}
+
+td,th{
+color:white;
+border-color:#55B8A6;
+padding: 10px;
+margin:10px;
+width:150px;
+height:40px;
+}
+.code:hover{
+background:linear-gradient(90deg, #FF1F00 0%, #FF00B8 100%);
+}
+div
+{
+}
+option{
+  background: #bf00ff;
+}
+select{
+  background: #bf00ff;
+}
+.adss
+{
+  background: #bf00ff;
+font-size:30px;
+margin-left:15%;
+}
+
+</style>
+</head>
+<body >
+<div class="form">
+<form action="/stu_fac" method="POST" class="from">
+<td><label class="lab" for="cname">Class Code</label>
+
+
+<select name="fac" class="lab">
+{%for k in range(lenclasscode):%}
+<option name={{classcodee[0][k]}}>{{classcodee[k][0]}}</option>
+{% endfor %}
+</select></td>
+</tr>
+<br>
+<input class="adss" type="submit">
+</div>
+</form>
+<div style="margin-top:5%">
+<table border="5px" style="border-color:#55B8A6;">
+<tr>
+<th>
+CLASS CODE
+</th>
+<th >
+{{kke}}
+</th>
+<th>
+</th>
+<th >
+</th>
+<th >
+</th>
+<th >
+</th>
+<th >
+</th>
+<th >
+</th>
+
+<th >
+{{section}}
+</th>
+
+</tr>
+<tr>
+</tr>
+<tr>
+<td>
+DAY
+</td>
+<td>08:00 AM - 09:00 AM</td>
+<td>09:00 AM - 10:00 AM</td>
+<td>10:00 AM - 11:00 AM</td>
+<td>11:00 AM - 12:00 PM</td>
+<td>12:00 PM - 01:00 PM</td>
+<td>01:00 PM - 02:00 PM</td>
+<td>02:00 PM - 03:00 PM</td>
+<td>03:00 PM - 04:00 PM</td>
+
+</tr>
+{%for j in range(6):%}
+<tr>
+<td>{{b[j]}}</td>
+{%for i in range(8):%}
+<td>
+{% set ad=j | string()%}
+{% set ac=i | string()%}
+{% set ab='subnote'+ad+ac+'a'%}
+{% set ba='subnote'+ad+ac+'b'%}
+{% set bb='subnote'+ad+ac+'c'%}
+
+{{dataa[ab]}}
+<br>
+{{dataa[ba]}}
+<br>
+{{dataa[bb]}}
+
+
+</td>
+{% endfor %}
+</tr>
+{% endfor %}
+
+
+</table>
+</div>
+</body>
+
+</html>

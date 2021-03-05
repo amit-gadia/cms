@@ -1,0 +1,93 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+background-color:#000834;
+}
+.abc{
+float:left;
+width:100%;
+margin-top:3%;
+border-width:5px;
+border-radius:30px;
+border-color:#55B8A6;
+height:90%;
+background-color:rgba(0,39,48,0.59);
+}
+.lab{
+color:#ffffff;
+font-size:30px;
+}
+.text{
+color:white;
+background-color:rgba(0,0,0,0);
+border-color:white;
+font-size:10px;
+}
+.from{
+margin-left:3%;
+margin-top:10%;
+}
+::-webkit-calendar-picker-indicator{
+filter:invert(1);
+}
+
+.but{
+height:50px;
+width:150px;
+border-radius:15px;
+color:white;
+font-size:18px;
+background:linear-gradient(180deg, #4200FF 0%, #00F0FF 100%);
+}
+</style>
+
+<title>
+COLLEGE MANAGEMENT SYSTEM WEB BASED
+</title>
+</head>
+<body>
+<div class="abc">
+
+<table border="1px" style="margin-left:10px;margin-top:35px">
+<tr>
+<td style="width:15%"><label class="lab" style="font-size:35px;" for="cname">CLASS</label></td>
+
+<td style="width:15%"><label class="lab" style="font-size:35px;" for="cname">TOPIC NAME</label></td>
+<td style="width:20%"><label style="font-size:35px;" class="lab" for="cname">SUBJECT NAME</label></td>
+<td style="width:20%"><label class="lab" style="font-size:35px;" for="cname">DUE DATE</label></td>
+<td style="width:20%"> <label style="font-size:35px;" class="lab" for="cname">NOTE</label></td>
+
+<td style="width:45%"> <label style="font-size:35px;" class="lab" for="cname">FILE</label></td>
+<td style="width:45%"> <label style="font-size:35px;" class="lab" for="cname">UPLOAD</label></td>
+
+<td style="width:45%"> <label style="font-size:35px;" class="lab" for="cname">SUBMIT</label></td>
+
+</tr>
+<tr>
+{%for i in range(t)%}
+<tr>
+
+<td style="color:white;font-size:23px;">{{c[i][1]}}</td>
+<td style="color:white;font-size:23px;">{{c[i][2]}}</td>
+<td style="color:white;font-size:23px;">{{c[i][3]}}</td>
+<td style="color:white;font-size:23px;">{{c[i][4]}}</td>
+<td style="color:white;font-size:23px;">{{c[i][5]}}</td>
+<td style="color:white;font-size:23px;"><a href="/download/{{c[i][6]}}">file
+<form class="from" action="HELLO" method="post" enctype="multipart/form-data">
+
+<input type="text" name="ame" value={{c[i][6]}}+{{c[i][7]}} DISABLED></td>
+<td style="color:white;font-size:23px;">
+<input type="file" name="fame" class="text">
+</td>
+<td style="color:white;font-size:23px;"><input type="submit" name="bname" class="but" value="ADD" style="background:linear-gradient(180deg, #00F0FF 0%, #4200FF 100%);"></input></td>
+
+
+</form>
+</tr>
+{%endfor%}
+</table>
+</div>
+</html>

@@ -1,0 +1,140 @@
+<html>
+<head>
+<style>
+body{
+background-color:#000834;
+}
+.form{
+margin-left:650px;
+margin-top:100px;
+border-color:#55B8A6;
+border-style:solid;
+border-width:5px;
+position: absolute;
+background-color:rgba(0,39,48,0.59);
+height:100px;
+width:500px;
+border-radius:60px;
+position: relative;
+}
+
+::placeholder{
+color:#00B2FF;
+}
+.loginbox{
+margin:50px 45px 25px;
+background-color:rgba(0,0,0,0);
+border-radius:50px;
+padding:10px 25px 10px;
+border-color:00B2FF;
+color:#00B2FF;
+border-width:2px;
+font-size:30px; 
+display:block;
+}
+.button{
+height:37px;
+width:152px;
+background-color:#00B2FF;
+margin-top:25px;
+margin-left:165px;
+border-color:#00B2FF;
+border-radius:50px;
+font-size:30px;
+}
+.lb{
+margin-left:145px;
+margin-top:50px;
+margin-bottom:0px;
+color:#FFFFFF;
+font-size:60px; 
+display:block;"
+}
+.lc{
+margin-left:55px;
+margin-top:0px;
+margin-bottom:0px;
+color:#00B2FF;
+font-size:25px; 
+display:block;"
+}
+
+td,th{
+color:white;
+border-color:#55B8A6;
+padding: 10px;
+margin:10px;
+width:150px;
+height:40px;
+}
+.code:hover{
+background:linear-gradient(90deg, #FF1F00 0%, #FF00B8 100%);
+}
+div
+{
+margin:10% 8%;
+}
+.option{
+  background: #bf00ff;
+}
+</style>
+</head>
+<body >
+<div class="form">
+<form action="" method="GET">
+<select name="code" style="color:white;font-size:20px;background:linear-gradient(180deg, #FF1F00 0%, #FF00B8 100%);width:150px;height:35px; margin-left:55px;margin-top:35px;">
+<option class="option">BCCO7
+</option>
+<option class="option" >BCCO7</option>
+<option class="option">BCCO7</option >
+<option class="option" >BCCO7
+</option>
+</select>
+<input type="submit" style="color:white;font-size:20px;background:linear-gradient(90deg, #CD00EE 0%, #4200FF 100%);width:100px;height:35px; margin-left:55px;margin-top:35px;"></button>
+</div>
+<div>
+<table border="5px" style="border-color:#55B8A6;">
+<tr>
+<th>
+CLASS CODE
+</th>
+<th >
+{{class}}
+</th>
+<th >
+</th>
+
+<th >
+</th>
+<th >
+</th>
+<th >
+</th>
+<th >
+</th>
+<th >
+SECTION</th>
+
+<th >
+{{section}}
+</th>
+
+</tr>
+<tr>
+</tr>
+{%for j in range(7):%}
+<tr>
+{%for i in a[j]:%}
+<td>
+{{i}}
+</td>
+{% endfor %}
+</tr>
+{% endfor %}
+
+
+</table>
+</div>
+</body>
+
+</html>

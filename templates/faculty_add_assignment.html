@@ -1,0 +1,110 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+background-color:#000834;
+}
+.abc{
+float:left;
+width:70%;
+margin-top:3%;
+border-width:5px;
+border-radius:30px;
+margin-left:15%;
+border-color:#55B8A6;
+height:90%;
+background-color:rgba(0,39,48,0.59);
+}
+.lab{
+color:#ffffff;
+font-size:30px;
+}
+.text{
+color:white;
+background-color:rgba(0,0,0,0);
+border-color:white;
+font-size:30px;
+}
+.from{
+margin-left:3%;
+margin-top:10%;
+}
+::-webkit-calendar-picker-indicator{
+filter:invert(1);
+}
+
+.but{
+height:50px;
+width:150px;
+border-radius:15px;
+color:white;
+font-size:18px;
+background:linear-gradient(180deg, #4200FF 0%, #00F0FF 100%);
+}
+</style>
+
+<title>
+COLLEGE MANAGEMENT SYSTEM WEB BASED
+</title>
+</head>
+<body>
+<div class="abc">
+
+<table class="from">
+<tr>
+<form class="from" action="/fac_add_assign" method="POST" enctype="multipart/form-data">
+<td><label class="lab" for="cname">Class Code</label></td>
+<td>
+<select style="background-color: rgba(0,39,48,0.59);" name="code" class="lab">
+{%for k in range(lenclasscode):%}
+<option name={{classcodee[0][k]}}>{{classcodee[k][0]}}</option>
+{% endfor %}
+</select></td>
+</tr>
+<tr>
+<td><label class="lab" for="sname">Subject Name</label></td>
+<td><input type="text" name="sname" class="text"></input></td>
+
+</tr>
+<tr>
+<td><label class="lab" for="tname">Topic Name</label></td>
+<td><input type="text" name="tname" class="text"></input></td>
+
+</tr>
+<br>
+<tr>
+<td><label class="lab" for="duedate">Due Date</label></td>
+<td><input type="date" name="duedate" class="text"></input></td>
+
+</tr>
+<br>
+<tr>
+<td><label class="lab" for="fame">File upload</label></td>
+<td><input type="file" name="fame" class="text"></input></td>
+
+</tr>
+<br>
+<tr>
+<td><label class="lab" for="note">Note</label></td>
+<td><input type="text" name="note" class="text"></input></td>
+
+</tr>
+<tr>
+<td>
+</td>
+<td><input type="submit" name="bname" class="but" value="ADD" style="background:linear-gradient(180deg, #00F0FF 0%, #4200FF 100%);" value="Add Fees"></input></td>
+</tr>
+
+<br>
+</div>
+</form>
+</table>
+
+</form>
+</tr>
+</table>
+
+</form>
+</div>
+</html>

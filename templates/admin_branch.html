@@ -1,0 +1,73 @@
+<html>
+/,.<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+background-color:#000834;
+}
+.abc{
+float:left;
+width:100%;
+margin-top:3%;
+border-width:0px;
+border-radius:60px;
+
+height:40%;
+background-color:rgba(0,39,48,0);
+}
+.lab{
+color:#ffffff;
+font-size:30px;
+}
+.text{
+color:white;
+background-color:rgba(0,0,0,0);
+border-color:white;
+font-size:30px;
+}
+.from{
+margin-left:3%;
+}
+
+
+.but{
+height:50px;
+width:150px;
+border-radius:15px;
+color:white;
+font-size:18px;
+background:linear-gradient(180deg, #4200FF 0%, #00F0FF 100%);
+}
+</style>
+
+<title>
+COLLEGE MANAGEMENT SYSTEM WEB BASED
+</title>
+</head>
+<body>
+<div class="abc">
+<iframe src="{{ss}}" width="100%" height="250px" style="border-color:rgba(0,0,0,0);">
+
+</iframe>
+<table class="from">
+<tr>
+<form class="from" action="/addcouuse" method="POST">
+<td width="35%"><label class="lab" for="cname">Course Name</label></td>
+<td width="45%"><input type="text" name="cname" class="text"></input></td>
+<td width="15%"> <input type="submit" name="couname"  class="but" value="ADD COURSE"></input></td>
+</form>
+</tr>
+<tr>
+<form class="from" action="/addbranch" method="POST">
+<td><label class="lab">Branch Name</label></td>
+<td><input type="text" name="bname" class="text"></input></td>
+</tr>
+<tr>
+<td><label class="lab">Branch Fees</label></td>
+<td><input type="text" name="bfees" class="text"></input></td>
+<td><input type="submit" name="butname" class="but" style="background:linear-gradient(180deg, #00F0FF 0%, #4200FF 100%);" value="BRANCH NAME"></input></td>
+</form>
+</tr>
+</table>
+</div>
+</html>

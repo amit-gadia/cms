@@ -1,0 +1,196 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+background-color:#000834;
+}
+.abc{
+float:left;
+width:70%;
+margin-top:3%;
+border-width:5px;
+border-radius:30px;
+margin-left:15%;
+border-color:#55B8A6;
+background-color:rgba(0,39,48,0.59);
+}
+.lab{
+color:#ffffff;
+font-size:30px;
+}
+.text{
+color:white;
+background-color:rgba(0,0,0,0);
+border-color:white;
+font-size:30px;
+}
+.from{
+margin-left:3%;
+margin-top:10%;
+}
+::-webkit-calendar-picker-indicator{
+filter:invert(1);
+}
+
+.but{
+height:50px;
+width:150px;
+border-radius:15px;
+color:white;
+font-size:18px;
+background:linear-gradient(180deg, #4200FF 0%, #00F0FF 100%);
+}
+</style>
+
+<title>
+COLLEGE MANAGEMENT SYSTEM WEB BASED
+</title>
+</head>
+<body>
+<div class="abc">
+
+<table class="from">
+<tr>
+<form class="from" action="stu_search_fees" method="POST">
+<td><label class="lab" for="rnoname">Registration Number</label></td>
+<td><input type="text" name="rnoname" class="text"></input></td>
+</tr><tr>
+<td></td>
+</tr><tr>
+<td></td>
+</tr><tr>
+<td></td>
+<td><input type="submit" name="bname" class="but" style="background:linear-gradient(180deg, #00F0FF 0%, #4200FF 100%);" value="Add Search"></input></td>
+</form>
+</tr>
+<tr>
+</tr>
+<tr>
+<td style="color:white;font-size:23px;">{{ack}}</td>
+</tr>
+</table>
+<table border="1px" style="margin-left:10px;margin-top:35px">
+<tr>
+<td style="color:white;width:10%">
+<td style="width:20%">
+<label class="lab" style="font-size:35px;" for="cname">Reg Number</label></td>
+<td style="width:20%"><label style="font-size:35px;" class="lab" for="cname">Name</label></td>
+<td style="width:20%"><label style="font-size:35px;" class="lab" for="cname">Course</label></td>
+<td style="width:20%"><label style="font-size:35px;" class="lab" for="cname">Branch</label></td>
+</tr>
+
+<tr>
+<td style="color:white;font-size:23px;">1.</td>
+<td style="color:white;font-size:23px;">{{gg}}</td>
+<td style="color:white;font-size:23px;">{{ag}}</td>
+<td style="color:white;font-size:23px;">{{bg}}</td>
+<td style="color:white;font-size:23px;">{{cg}}</td>
+</tr>
+</table>
+<table border="1px" style="margin-left:10px;margin-top:35px">
+<tr>
+<td style="width:25%">
+<label class="lab" style="font-size:25px;" for="cname">Total Fees</label></td>
+
+<td style="width:25%">
+<label class="lab" style="font-size:25px;" for="cname">ACADEMIC FEES</label></td>
+
+<td style="width:25%">
+<label class="lab" style="font-size:25px;" for="cname">HOSTEL FEES</label></td>
+<td style="width:25%">
+<label class="lab" style="font-size:25px;" for="cname">TRANSPORT FEES</label></td>
+</tr>
+<tr>
+<td style="width:25%">
+<label class="lab" style="font-size:35px;" for="cname">Facility</label></td>
+<td style="color:white;font-size:23px;">YES</td>
+<td style="color:white;font-size:23px;">{{hf}}</td>
+
+<td style="color:white;font-size:23px;">{{tf}}</td>
+</tr>
+<tr>
+<td style="width:25%">
+<label class="lab" style="font-size:35px;" for="cname">Total Fees</label></td>
+<td style="color:white;font-size:23px;">{{t}}</td>
+
+<td style="color:white;font-size:23px;">{{ht}}</td>
+
+<td style="color:white;font-size:23px;">{{tt}}</td>
+</tr>
+
+<tr>
+<td style="width:25%">
+<label class="lab" style="font-size:35px;" for="cname">Submitted Fees</label></td>
+<td style="color:white;font-size:23px;">{{f}}</td>
+<td style="color:white;font-size:23px;">{{hs}}</td>
+<td style="color:white;font-size:23px;">{{ts}}</td>
+</tr>
+<tr>
+<td style="width:25%">
+<label class="lab" style="font-size:35px;" for="cname">Due Fees</label></td>
+<td style="color:white;font-size:23px;">{{r}}</td>
+<td style="color:white;font-size:23px;">{{hr}}</td>
+<td style="color:white;font-size:23px;">{{tr}}</td>
+</tr>
+<tr>
+</tr>
+</table>
+<table class="from">
+<tr>
+<form class="from" method="POST" action="/add_fees_stu">
+<td><label class="lab" for="rnoname">Registration Number</label></td>
+<td><input type="text" name="rnoname" class="text"></input></td>
+</tr><tr>
+<td><label class="lab" for="cname">Enter Fees</label></td>
+<td><input type="text" name="cfess" class="text"></input></td>
+</tr><tr>
+<td></td>
+</tr><tr>
+<td></td>
+
+</tr><tr>
+<td></td>
+<td><input type="submit" name="bname" class="but" style="background:linear-gradient(180deg, #00F0FF 0%, #4200FF 100%);" value="Add Fees"></input></td>
+</form>
+
+<table class="from">
+<tr>
+<form class="from" method="POST" action="/add_hosfees_stu">
+<td><label class="lab" for="rnoname">Registration Number</label></td>
+<td><input type="text" name="rnoname" class="text"></input></td>
+</tr><tr>
+<td><label class="lab" for="cname">Enter Fees</label></td>
+<td><input type="text" name="cfess" class="text"></input></td>
+</tr><tr>
+<td></td>
+</tr><tr>
+<td></td>
+
+</tr><tr>
+<td></td>
+<td><input type="submit" name="bname" class="but" style="background:linear-gradient(180deg, #00F0FF 0%, #4200FF 100%);" value="Add Hostel Fees"></input></td>
+</form>
+</tr>
+</table>
+
+</form>
+<table class="from">
+<tr>
+<form class="from" method="POST" action="/add_transfees_stu">
+<td><label class="lab" for="rnoname">Registration Number</label></td>
+<td><input type="text" name="rnoname" class="text"></input></td>
+</tr><tr>
+<td><label class="lab" for="cname">Enter Fees</label></td>
+<td><input type="text" name="cfess" class="text"></input></td>
+</tr><tr>
+<td></td>
+</tr><tr>
+<td></td>
+
+</tr><tr>
+<td></td>
+<td><input type="submit" name="bname" class="but" style="width:200px;background:linear-gradient(180deg, #00F0FF 0%, #4200FF 100%);" value="Add Transport Fees"></input></td>
+</form>
+</div>
+</html>

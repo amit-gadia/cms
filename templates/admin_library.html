@@ -1,0 +1,124 @@
+<html>
+/,.<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+background-color:#000834;
+}
+.abc{
+float:left;
+width:70%;
+margin-top:3%;
+border-width:5px;
+border-radius:30px;
+margin-left:15%;
+border-color:#55B8A6;
+height:90%;
+background-color:rgba(0,39,48,0.59);
+}
+.lab{
+color:#ffffff;
+font-size:30px;
+}
+.text{
+color:white;
+background-color:rgba(0,0,0,0);
+border-color:white;
+font-size:30px;
+}
+.from{
+margin-left:3%;
+margin-top:10%;
+}
+::-webkit-calendar-picker-indicator{
+filter:invert(1);
+}
+
+.but{
+height:50px;
+width:150px;
+border-radius:15px;
+color:white;
+font-size:18px;
+background:linear-gradient(180deg, #4200FF 0%, #00F0FF 100%);
+}
+</style>
+
+<title>
+COLLEGE MANAGEMENT SYSTEM WEB BASED
+</title>
+</head>
+<body>
+<div class="abc">
+
+<table class="from">
+<tr>
+<form class="from" action="/stu_search_library" method="POST">
+<td><label class="lab" for="rnoname">Registration Number</label></td>
+<td><input type="text" name="rnoname" class="text"></input></td>
+</tr><tr>
+<td></td>
+</tr><tr>
+<td></td>
+</tr><tr>
+<td></td>
+<td><input type="submit" name="bname" class="but" style="background:linear-gradient(180deg, #00F0FF 0%, #4200FF 100%);" value="Add Search"></input></td>
+</form>
+</tr>
+</table>
+<table border="1px" style="margin-left:10px;margin-top:35px">
+<tr>
+<td style="color:white;width:10%">
+<td style="width:20%">
+<label class="lab" style="font-size:35px;" for="cname">Reg Number</label></td>
+<td style="width:20%"><label style="font-size:35px;" class="lab" for="cname">Name</label></td>
+<td style="width:20%"><label style="font-size:35px;" class="lab" for="cname">Course</label></td>
+<td style="width:20%"><label style="font-size:35px;" class="lab" for="cname">Branch</label></td>
+</tr>
+<tr>
+<td style="color:white;font-size:23px;">1.</td>
+<td style="color:white;font-size:23px;">{{gg}}</td>
+<td style="color:white;font-size:23px;">{{ag}}</td>
+<td style="color:white;font-size:23px;">{{bg}}</td>
+<td style="color:white;font-size:23px;">{{cg}}</td>
+</tr>
+</table>
+<table border="1px" style="margin-left:10px;margin-top:35px">
+<tr>
+<td><label class="lab" style="font-size:35px;" for="cname">Book Id</label></td>
+<td><label class="lab" style="font-size:35px;" for="cname">Issue Date</label></td>
+<td><label class="lab" style="font-size:35px;" for="cname">Submit Date</label></td>
+<td><label class="lab" style="font-size:35px;" for="cname">Delete</label></td>
+</tr>
+{%for i in range(lend)%}
+<tr>
+<td><label class="lab" style="font-size:35px;" for="cname">{{de[i][2]}}</label></td>
+<td><label class="lab" style="font-size:35px;" for="cname">{{de[i][3]}}</label></td>
+<td><label class="lab" style="font-size:35px;" for="cname">{{de[i][4]}}</label></td>
+<td style="color:white;font-size:23px;"><a href="/abcbook/{{de[i][2]}}/{{de[i][1]}}">Delete</td> 
+</tr>
+{%endfor%}
+</table>
+<table class="from">
+<tr>
+<form class="from" method="POST" action="/add_lib_stu">
+<td><label class="lab" for="rnoname">Registration Number</label></td>
+<td><input type="text" name="rnoname" class="text"></input></td>
+</tr><tr>
+<td><label class="lab" for="cname">Enter Book No.</label></td>
+<td><input type="text" name="cfess" class="text"></input></td>
+</tr><tr>
+<td></td>
+</tr><tr>
+<td></td>
+
+</tr><tr>
+<td></td>
+<td><input type="submit" name="bname" class="but" style="background:linear-gradient(180deg, #00F0FF 0%, #4200FF 100%);" value="Add Book"></input></td>
+</form>
+</tr>
+</table>
+
+</form>
+</div>
+</html>

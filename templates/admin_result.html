@@ -1,0 +1,102 @@
+<html>
+/,.<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+background-color:#000834;
+}
+.abc{
+float:left;
+width:70%;
+margin-top:3%;
+border-width:5px;
+border-radius:30px;
+margin-left:15%;
+border-color:#55B8A6;
+height:90%;
+background-color:rgba(0,39,48,0.59);
+}
+.lab{
+color:#ffffff;
+font-size:30px;
+}
+.text{
+color:white;
+background-color:rgba(0,0,0,0);
+border-color:white;
+font-size:30px;
+}
+.from{
+margin-left:3%;
+margin-top:10%;
+}
+::-webkit-calendar-picker-indicator{
+filter:invert(1);
+}
+
+.but{
+height:50px;
+width:150px;
+border-radius:15px;
+color:white;
+font-size:18px;
+background:linear-gradient(180deg, #4200FF 0%, #00F0FF 100%);
+}
+</style>
+
+<title>
+COLLEGE MANAGEMENT SYSTEM WEB BASED
+</title>
+</head>
+<body>
+<div class="abc">
+
+<table class="from">
+<tr>
+<td>
+</tr>
+<form class="from" method="POST" action="/adm_cb">
+<tr>
+<td></td>
+</tr><tr>
+<td></td>
+</tr>
+<tr>
+<td><label class="lab" for="course">Course</label></td>
+<td><select name="course" class="text">
+{%for i in range(co)%}
+<option  class="opt" value={{c[i][1]}}>{{c[i][1]}}</option>
+{%endfor%}
+</select>
+</td>
+</tr>
+<td><label class="lab" for="branch">Branch</label></td>
+<td><select name="branch" class="text">
+{%for i in range(br)%}
+<option  class="opt" value={{b[i][1]}}>{{b[i][1]}}</option>
+{%endfor%}
+</select>
+</tr>
+<tr>
+<td></td>
+<td><input type="submit" name="bname" class="but" style="background:linear-gradient(180deg, #00F0FF 0%, #4200FF 100%);" value="Add Code"></input></td>
+</form>
+</tr>
+</table>
+<div>
+<table border="1px" style="margin-left:5px;margin-top:50px;" >
+<tr>
+<td style=" color:white;width:4%">
+<td style="width:15%"><label class="lab" style="font-size:40px;" for="cname">Code</label></td>
+<td style="width:7%"></td>
+</tr>
+{%for i in range(lencode)%}
+<tr>
+<td style="color:white;font-size:23px;">{{codee[i][0]}}</td>
+<td style="color:white;font-size:23px;">{{codee[i][3]}}</td>
+<td style="color:white;font-size:23px;"><a href="/accd/{{codee[i][3]}}">Delete</a></td>
+</tr>
+{%endfor%}
+</table>
+</div>
+</html>

@@ -1,0 +1,138 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+background-color:#000834;
+}
+.abc{
+float:left;
+width:70%;
+margin-top:3%;
+border-width:5px;
+border-radius:30px;
+margin-left:15%;
+background-color:rgba(0,39,48,0);
+}
+.lab{
+color:#ffffff;
+font-size:30px;
+}
+.text{
+color:white;
+background-color:rgba(0,0,0,0);
+border-color:white;
+font-size:30px;
+}
+.from{
+margin-left:50%;
+margin-top:10%;
+}
+::-webkit-calendar-picker-indicator{
+filter:invert(1);
+}
+
+.but{
+height:50px;
+width:150px;
+border-radius:15px;
+color:white;
+font-size:18px;
+background:linear-gradient(180deg, #4200FF 0%, #00F0FF 100%);
+}
+</style>
+
+<title>
+COLLEGE MANAGEMENT SYSTEM WEB BASED
+</title>
+</head>
+<body>
+<div class="abc">
+
+<table class="">
+<tr>
+<form action="/addroom" method="POST">
+<td width="35%"><label class="lab" for="bno">Room Number</label></td>
+<td width="45%"><input type="text" name="bno" class="text"></input></td>
+<td width="15%"> <input type="submit" name="couname"  class="but" value="ADD ROOM NO."></input></td>
+</form>
+</tr>
+<tr>
+<form class="from" action="/addroominfo" method="POST">
+<td><label class="lab" for="Bus_No">Room_No</label></td>
+<td><select name="Bus_No" class="text">
+{%for i in range(br)%}
+<option  class="opt" value={{b[i][0]}}>{{b[i][0]}}</option>
+{%endfor%}
+</select>
+</tr>
+<tr>
+<td><label class="lab">Type</label></td>
+<td><select name="point" class="text">
+<option value="AC">AC</option>
+<option value="Non-AC">NON-AC</option>
+</select></td>
+</tr>
+<tr>
+<td><label class="lab">Fees</label></td>
+<td><input type="text" name="busfees" class="text"></input></td>
+</tr>
+<tr>
+<td><label class="lab">Student id</label></td>
+<td><input type="text" name="stu_id" class="text"></input></td>
+</tr>
+<tr>
+<td><label class="lab">Local Guardian</label></td>
+<td><input type="text" name="local_guardian" class="text"></input></td>
+</tr>
+<tr>
+<td><label class="lab">Address</label></td>
+<td><input type="text" name="address" class="text"></input></td>
+</tr>
+<tr>
+<td><label class="lab">Goods Details M_P_E</label></td>
+<td><input type="text" name="goods_detailsM_P_E" class="text"></input></td>
+</tr>
+<td><input type="submit" name="busfees" class="but" style="background:linear-gradient(180deg, #00F0FF 0%, #4200FF 100%);" value="ADD ROOM"></input></td>
+</form>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div>
+<table border="1px" style="margin-left:5px;margin-top:50px;" >
+<tr>
+<td style=" color:white;width:4%"></td>
+<td style="width:15%"><label class="lab" style="font-size:20px;" for="cname">ROOM NUMBER</label></td>
+<td style="width:15%"><label style="font-size:20px;" class="lab" for="cname">TYPE</label></td>
+<td style="width:10%"><label style="font-size:20px;" class="lab" for="cname">FEES</label></td>
+<td style="width:10%"><label style="font-size:20px;" class="lab" for="cname">NAME</label></td>
+<td style="width:10%"><label style="font-size:20px;" class="lab" for="cname">LOCAL GUARDIAN</label></td>
+<td style="width:10%"><label style="font-size:20px;" class="lab" for="cname">ADDRESS</label></td>
+<td style="width:10%"><label style="font-size:20px;" class="lab" for="cname">GOODS M_P_E</label></td>
+
+<td style="width:7%"></td>
+</tr>
+{%for i in range(co)%}
+<tr>
+<td style="color:white;font-size:23px;">{{c[i][0]}}</td>
+
+<td style="color:white;font-size:23px;">{{c[i][1]}}</td>
+<td style="color:white;font-size:23px;">{{c[i][2]}}</td>
+<td style="color:white;font-size:23px;">{{c[i][3]}}</td>
+
+<td style="color:white;font-size:23px;">{{c[i][4]}}</td>
+<td style="color:white;font-size:23px;">{{c[i][5]}}</td>
+<td style="color:white;font-size:23px;">{{c[i][6]}}</td>
+<td style="color:white;font-size:23px;">{{c[i][7]}}</td>
+<td style="color:white;font-size:23px;"><a href="/arrd/{{c[i][1]}}">Delete</a></td>
+</tr>
+{%endfor%}
+</table>
+
+</div>
+</html>

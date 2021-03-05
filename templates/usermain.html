@@ -1,0 +1,149 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+background-color:#000834;
+}
+.left{
+float:left;
+width:24%;
+border-width:5px;
+border-radius:30px;
+margin-left:1%;
+border-color:#55B8A6;
+height:95%;
+background-color:rgba(0,39,48,0.59);
+}
+.leftdown{
+overflow-y:scroll;
+overflow-x:hidden; 
+width:90%;
+height:60%;
+}
+
+.leftup{
+float:left;
+width:80%;
+border-width:5px;
+border-radius:30px;
+margin-left:10%;
+margin-top:10%;
+margin-right:10%;
+border-color:#55B8A6;
+height:30%;
+background-color:rgba(0,39,48,0.59);
+}
+::-webkit-scrollbar{
+color:#00B2FF;
+}
+.rightup{
+float:right;
+border-radius:20px;
+margin-right:1%;
+width:15%;
+height:75px;
+background-color:rgba(0,39,48,0.59);
+}
+.right{
+float:right;
+margin-right:1%;
+margin-top:2.5%;
+border-radius:30px;
+width:73%;
+height:80%;
+background-color:rgba(0,39,48,0.59);
+}
+.btn{
+width:80%;
+height:10%;
+margin-left:20%;
+margin-right:10%;
+border-radius:50px;
+
+margin-top:10%;
+}
+.user{
+
+  color: white;
+width:80%;
+height:70%;
+border-radius:25px;
+margin-left:10%;
+margin-left:10%;
+margin-top:2.5%;
+background-color:rgba(0,39,48,0.59);
+}
+.list{ 
+display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown {
+  position: relative;
+width:100px;
+  display: inline-block;
+}
+.content
+{
+display: none;
+  position: absolute;
+  background-color: rgba(0,0,0,0.2);
+  min-width: 160px;
+
+}
+.dropdown:hover .content {
+  display: block;
+	background-color:rgba(25,25,25,1)
+}
+.frame{
+margin:2.5% 5%;
+border-radius:25px;
+border-color:#55B8A6;
+}
+</style>
+
+<title>
+COLLEGE MANAGEMENT SYSTEM WEB BASED
+</title>
+</head>
+<body>
+<div class="abc">
+<div class="left">
+<div class="leftup">
+<img src="{{filename}}" style="margin:1% 20%;"><br>
+<label style="font-size:40px;color:white; margin:1% 15%;">{{user}}</label><br>
+
+<label style="font-size:40px;color:white; margin:1% 15%;">{{userrole}}</label>
+</div>
+<div class="leftdown">
+<form action="/loadstu" method="POST">
+<input type="submit" name="abc" class="btn" value="PROFILE" style="color:white;font-size:25px;background:linear-gradient(180deg, #FF1F00 0%, #FF008A 100%)"></input>
+<input type="submit" name="abc" class="btn" value="NOTICE" style="color:white;font-size:25px;background:linear-gradient(180deg, #CD00EE 0%, #4200FF 100%)"></input>
+<input type="submit" name="abc" class="btn" value="STU_TIME_TABLE" style="color:white;font-size:25px;background:linear-gradient(180deg, #4200FF 0%, #00F0FF 100%)"></input>
+<input type="submit" name="abc" class="btn" value="VIEW_ATTENDANCE" style="color:white;font-size:25px;background:linear-gradient(180deg, #00D1FF 0%, #6BF200 100%)"></input>
+<input type="submit" name="abc" class="btn" value="VIEW_ASSIGNMENT" style="color:white;font-size:25px;background:linear-gradient(180deg, #00DE16 0%, #FFC700 100%)"></input>
+<input type="submit" name="abc" class="btn" value="VIEW_FEES" style="color:white;font-size:25px;background:linear-gradient(180deg, #FFC700 0%, #FF1F00 100%)"></input>
+<input type="submit" name="abc" class="btn" value="VIEW_LIBRARY" style="color:white;font-size:25px;background:linear-gradient(180deg, #FF1F00 0%, #FF008A 100%)"></input>
+</form>
+</div>
+</div>
+
+<div class="rightup">
+	<div class="dropdown" style="font-size:25px;color:white;margin:20px 55px 10px;">Menu
+		<div class="content" style="font-size:20px;color:white;">
+<form action="/logout">			
+<input type="submit" style="font-size:20px;color:white;width:100%;height:100%;background:linear-gradient(174.2deg, #00D1FF 29.71%, #6BF200 96.06%)" value="LOGOUT"></input>
+</form>
+		</div>
+	</div>
+</div>
+<br>
+<div class="right">
+<iframe class="frame" height="90%" width="90%" src="{{frame}}">abc</iframe>
+</div>
+</div>
+</html>

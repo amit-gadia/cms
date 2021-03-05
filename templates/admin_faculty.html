@@ -1,0 +1,134 @@
+r<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+background-color:#000834;
+}
+.abc{
+float:left;
+width:70%;
+border-width:5px;
+border-radius:30px;
+margin-left:15%;
+border-color:#55B8A6;
+height:100%;
+background-color:rgba(0,39,48,0.59);
+}
+.lab{
+color:#ffffff;
+font-size:30px;
+width:30%;
+}
+.text{
+color:white;
+background-color:rgba(0,0,0,0);
+border-color:white;
+font-size:25px;
+}
+.from{
+margin-left:7%;
+}
+::-webkit-calendar-picker-indicator{
+filter:invert(1);
+}
+.opt{
+background-color:rgba(0,39,48,0.59);
+}
+.but{
+height:50px;
+width:150px;
+border-radius:15px;
+color:white;
+font-size:30px;
+background:linear-gradient(180deg, #4200FF 0%, #00F0FF 100%);
+}
+</style>
+
+<title>
+COLLEGE MANAGEMENT SYSTEM WEB BASED
+</title>
+</head>
+<body>
+<div class="abc">
+<form class="from" action="/addfaculty" method="POST">
+<table>
+<tr>
+<td><label class="lab" for="frname">Last id is {{f}}</td>
+</tr><tr>
+<td><label class="lab" for="frname">User ID</td>
+<td><label class="lab" for="frname">{{c}}</td>
+</tr><tr>
+<td><label class="lab" for="frname">Password</td>
+<td><label class="lab" for="frname">{{d}}</td>
+</tr>
+<tr style="margin-top:10px">
+<td><label class="lab" for="frname">First Name</label></td>
+<td><input type="text" name="frname" class="text"></input></td>
+</tr>
+<tr>
+<td><label class="lab" for="lname">Last Name</label></td>
+<td><input type="text" name="lname" class="text"></input></td>
+</tr>
+<tr>
+<td><label class="lab" for="dob">Date Of Birth</label></td>
+<td><input type="Date" name="dob" class="text"></input></td>
+</tr>
+<tr>
+<td><label class="lab" for="bsd">Select B. Degree</label></td>
+<td><input type="text" name="bsd" class="text"></input></td>
+</tr>
+<tr>
+<td><label class="lab" for="msd">Select M. Degree</label></td>
+<td><input type="text" name="msd" class="text"></input></td>
+</tr>
+<tr>
+<td><label class="lab" for="fname">Father Name</label></td>
+<td><input type="text" name="fname" class="text"></input></td>
+</tr>
+<tr>
+<td><label class="lab" for="address">Address</label></td>
+<td><input type="text" name="address" class="text"></input></td>
+</tr>
+<tr>
+<td><label class="lab" for="Blood group"/>Blood Group</td>
+<td><select name="Blood_group" class="text">
+<option class="opt" value="Ap">A+</option>
+<option class="opt" value="An">A-</option>
+<option class="opt" value="bp">B+</option>
+<option class="opt" value="bn">B-</option>
+<option class="opt" value="op">O+</option>
+<option class="opt" value="on">O-</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><label class="lab" for="city">City</label></td>
+<td><input type="text" name="city" class="text"></input></td>
+</tr><tr>
+<td><label class="lab" for="state">State</label></td>
+<td><input type="text" name="state" class="text"></input></td>
+</tr><tr>
+<td><label class="lab" for="number">Number</label></td>
+<td><input type="number" name="number" class="text"></input></td>
+</tr><tr>
+<td><label class="lab" for="gender"/>Gender</td>
+<td><select name="gender" class="text">
+<option class="opt" value="male">MALE</option>
+<option class="opt" value="female">FEMALE</option>
+<option class="opt" value="other">OTHER</option>
+</select>
+</td>
+</tr>
+<tr>
+<td> .</td>
+</tr>
+<tr>
+<td></td>
+<td><input class="but" type="submit"></td>
+</tr>
+</table>
+</form>
+</div>
+<>
+ </html>
